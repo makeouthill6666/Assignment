@@ -1,1 +1,1 @@
-this is assignmnet for KEB Bootcamp
+this is assignment for KEB Bootcamp
