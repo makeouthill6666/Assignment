@@ -55,8 +55,27 @@ while True :
             print("Invalid input. Please enter an integer.")
 
     elif Menu == '4' :
-        pass
+        try:
+            numbers = input("Input two different numbers : ").split()
+            n1 = int(numbers[0])
+            n2 = int(numbers[1])
+            if n1 > n2:
+                n1, n2 = n2, n1
 
+            for number in range(n1, n2 + 1):
+                is_prime = True
+                if numbers < 2:
+                    pass
+                else:
+                    i = 2
+                    for i in range(2, numbers):
+                        if numbers % i == 0:
+                            is_prime = False
+                            break
+                    if is_prime: print(numbers, end=' ')
+
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
 
     elif Menu == '5' :
         print('Terminating the program.')
@@ -81,23 +100,5 @@ while True :
 
 
 
-# try:
-#     numbers = split(input("Input two different numbers : "))
-#
-#
-#     is_prime = True
-#     if number < 2:
-#         print(f'{number} is not a prime number')
-#     else:
-#         i = 2
-#         while i < number:
-#             if number % i == 0:
-#                 is_prime = False
-#                 break
-#             i += 1
-#         if is_prime:
-#             print(f'{number} is a prime number')
-#         else:
-#             print(f'{number} is not a prime number')
-# except ValueError:
-#     print("Invalid input. Please enter an integer.")
+
+
