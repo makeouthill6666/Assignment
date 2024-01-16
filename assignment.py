@@ -64,15 +64,15 @@ while True :
 
             for number in range(n1, n2 + 1):
                 is_prime = True
-                if numbers < 2:
+                if number < 2:
                     pass
                 else:
-                    i = 2
-                    for i in range(2, numbers):
-                        if numbers % i == 0:
+                    for i in range(2, number):
+                        if number % i == 0:
                             is_prime = False
                             break
-                    if is_prime: print(numbers, end=' ')
+                    if is_prime:
+                        print(number, end=' ')
 
         except ValueError:
             print("Invalid input. Please enter an integer.")
@@ -81,24 +81,4 @@ while True :
         print('Terminating the program.')
         break
     print()
-
-
-
-#prime number
-# number = int(input("input number : "))
-# cnt = 0
-# i = 1
-# while i <= number:
-#     if number%i == 0:
-#         cnt=cnt+1
-#     i = i+1
-# if cnt == 2:
-#     print(f'{number} is prime number')
-# else :
-#     print(f'{number} is not prime number')
-
-
-
-
-
 
