@@ -82,3 +82,33 @@ while True :
         break
     print()
 
+#6.1
+list = [3, 2, 1, 0]
+
+for num in list:
+    print(num)
+
+#6.2
+guess_me = 7
+number = 1
+while number :
+    if guess_me>number :
+        print('too low')
+    elif guess_me==number :
+        print('found it!')
+        break
+    elif guess_me<number :
+        print('oops')
+        break
+    number = number + 1
+#6.3
+guess_me = 5
+for number in range(10):
+    if guess_me > number:
+        print('too low')
+    elif guess_me==number :
+        print('found it!')
+        break
+    elif guess_me<number :
+        print('oops')
+        break
