@@ -14,7 +14,7 @@ def f_to_c(Fahrenheit):
     return (Fahrenheit - 32) * 5/9
 
 while True :
-    Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime nubmer checker between two numbers 5) Quit : ")
+    Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime number checker between two numbers 5) Quit : ")
     print()
     if Menu not in ['1', '2', '3', '4', '5'] :
         print("Please choose from the menu.")
@@ -62,6 +62,8 @@ while True :
 
             n1 = int(numbers[0])
             n2 = int(numbers[1])
+            if n1 == n2 :
+                raise ValueError("Please enter exactly two numbers.")
             if n1 > n2:
                 n1, n2 = n2, n1
 
@@ -70,10 +72,13 @@ while True :
                 if number < 2:
                     pass
                 else:
-                    for i in range(2, number):
+                    i = 2
+                    while i * i <= number:
                         if number % i == 0:
                             is_prime = False
                             break
+                        i = i + 1
+                        # print(i, end= ' ')
                     if is_prime:
                         print(number, end=' ')
 
