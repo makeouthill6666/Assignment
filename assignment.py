@@ -57,6 +57,9 @@ while True :
     elif Menu == '4' :
         try:
             numbers = input("Input two different numbers : ").split()
+            if len(numbers) != 2:
+                raise ValueError("Please enter exactly two numbers.")
+
             n1 = int(numbers[0])
             n2 = int(numbers[1])
             if n1 > n2:
@@ -75,7 +78,7 @@ while True :
                         print(number, end=' ')
 
         except ValueError:
-            print("Invalid input. Please enter an integer.")
+            print("Invalid input. Please enter two different integers.")
 
     elif Menu == '5' :
         print('Terminating the program.')
