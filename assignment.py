@@ -23,7 +23,7 @@ while True :
             Celsius = float(input('Input Celsius : '))
             result = c_to_f(Celsius)
             if result is not None:
-                print(f'{Celsius}C, {result:.4f}F')
+                print(f'{Celsius}°C, {result:.4f}°F')
         except ValueError :
             print("Invalid input. Please enter an integer.")
     elif Menu == '2' :
@@ -31,7 +31,7 @@ while True :
             Fahrenheit = float(input('Input Fahrenheit : '))
             result = f_to_c(Fahrenheit)
             if result is not None:
-                print(f'{Fahrenheit}F, {result:.4f}C')
+                print(f'{Fahrenheit}°F, {result:.4f}°C')
         except ValueError :
             print("Invalid input. Please enter an integer.")
     elif Menu == '3' :
