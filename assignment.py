@@ -159,3 +159,12 @@ odds_generator = get_odds()
 
 third_odd = list(get_odds())[2]
 print(third_odd)
+
+#9.3
+def test(func):
+    def wrapper(*args, **kwargs):
+        print("start")
+        result = func(*args, **kwargs)
+        print("end")
+        return result
+    return wrapper
