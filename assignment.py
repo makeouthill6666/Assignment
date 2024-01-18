@@ -146,3 +146,10 @@ print(life.keys())
 
 #8.8
 print((life['animals']).keys())
+
+#8.9
+print(life['animals']['cats'])
+
+#8.10
+squares = {n:pow(n,2) for n in range(10)}
+print(squares)
