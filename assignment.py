@@ -28,6 +28,7 @@ def isprime(n) -> bool:
                 return False
             i += 1
         return True
+print(isprime.__doc__)
 
 while True :
     Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime number checker between two numbers 5) Quit : ")
@@ -62,15 +63,8 @@ while True :
 
     elif Menu == '4' :
         try:
-            numbers = input("Input two different numbers : ").split()
-            if len(numbers) != 2:
-                raise ValueError("Please enter exactly two numbers.")
-            n1 = int(numbers[0])
-            n2 = int(numbers[1])
-            if n1 == n2 :
-                raise ValueError("Please enter exactly two numbers.")
-            if n1 > n2:
-                n1, n2 = n2, n1
+            n1, n2 = map(int,input("Input two different numbers : ").split())
+            n1, n2 = min(n1, n2), max(n1, n2)
 
             for n in range(n1, n2 + 1):
                 if isprime(n):
