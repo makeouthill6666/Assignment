@@ -149,15 +149,15 @@
 #
 # print(good())
 
-def good() -> list:
-    """
-    chapter9 things to do. 9.1
-    :return: list
-    """
-    harry_porter = input().split()
-    return harry_porter
-
-print(good())
+# def good() -> list:
+#     """
+#     chapter9 things to do. 9.1
+#     :return: list
+#     """
+#     harry_porter = input().split()
+#     return harry_porter
+#
+# print(good())
 
 #9.2
 # def get_odds() :
@@ -169,16 +169,39 @@ print(good())
 #
 # third_odd = list(get_odds())[2]
 # print(third_odd)
+
+# def get_odds(n) -> int :
+#     for i in range(1, n+1, 2) :
+#         yield i
 #
-# #9.3
-# def test(func):
-#     def wrapper(*args, **kwargs):
-#         print("start")
-#         result = func(*args, **kwargs)
-#         print("end")
-#         return result
-#     return wrapper
+# cnt = 0
+# odds = get_odds(9)
+# for odd in odds:
+#     cnt = cnt +1
+#     if cnt ==3:
+#         print(f'{odd} is odd number')
 #
+# #9.3 open closed principle
+def test(func):
+    def test_in(*args, **kwargs):
+        print("start")
+        result = func(*args, **kwargs)
+        print("end")
+        return result
+    return test_in
+#
+def greeting():
+    print("안녕하세요")
+
+t = test(greeting)
+t()
+
+@test
+def greeting():
+    print("안녕하세요")
+
+greeting()
+
 # #9.4
 # class OopsException(Exception):
 #     print('Caught an oops')
