@@ -182,32 +182,32 @@
 #         print(f'{odd} is odd number')
 #
 # #9.3 open closed principle
-def test(func):
-    def test_in(*args, **kwargs):
-        print("start")
-        result = func(*args, **kwargs)
-        print("end")
-        return result
-    return test_in
+# def test(func):
+#     def test_in(*args, **kwargs):
+#         print("start")
+#         result = func(*args, **kwargs)
+#         print("end")
+#         return result
+#     return test_in
+# #
+# def greeting():
+#     print("안녕하세요")
 #
-def greeting():
-    print("안녕하세요")
+# t = test(greeting)
+# t()
+#
+# @test
+# def greeting():
+#     print("안녕하세요")
+#
+# greeting()
 
-t = test(greeting)
-t()
-
-@test
-def greeting():
-    print("안녕하세요")
-
-greeting()
-
-# #9.4
-# class OopsException(Exception):
-#     print('Caught an oops')
-# list = [-1,1,2,3]
-# a = list[0]
-# if a < 0 :
-#     raise OopsException()
-# else :
-#     pass
+#9.4
+class OopsException(Exception):
+    print('Caught an oops')
+list = [-1,1,2,3]
+a = list[0]
+if a < 0 :
+    raise OopsException("oops")
+else :
+    print("fine")
