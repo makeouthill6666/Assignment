@@ -1,83 +1,83 @@
 # # (0°C × 9/5) + 32 = 32°F
 # # (32°F − 32) × 5/9 = 0°C
 
-# def c_to_f(Celsius):
-#     if Celsius < -273.15:
-#         print("Invalid input. Temperature cannot be below absolute zero.")
-#         return None
-#     return (Celsius * 9/5) + 32
-#
-# def f_to_c(Fahrenheit):
-#     if Fahrenheit < -459.67:
-#         print("Invalid input. Temperature cannot be below absolute zero.")
-#         return None
-#     return (Fahrenheit - 32) * 5/9
-#
-# def isprime(n) -> bool:
-#     """
-#     매개변수로 넘겨받은 수가 소수인지 여부를 boolean으로 리턴
-#     : param n: 판정할 매개변수
-#     : return: 소수면 True 아니면 False
-#     """
-#     if n < 2:
-#         return False
-#     else:
-#         i = 2
-#         while i*i <= n:
-#             if n % i == 0:
-#                 return False
-#             i += 1
-#         return True
-# print(isprime.__doc__)
-#
-# while True :
-#     Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime number checker between two numbers 5) Quit : ")
-#     print()
-#     if Menu not in ['1', '2', '3', '4', '5'] :
-#         print("Please choose from the menu.")
-#     if Menu == '1' :
-#         try :
-#             Celsius = float(input('Input Celsius : '))
-#             result = c_to_f(Celsius)
-#             if result is not None:
-#                 print(f'{Celsius}°C, {result:.4f}°F')
-#         except ValueError :
-#             print("Invalid input. Please enter an integer.")
-#     elif Menu == '2' :
-#         try :
-#             Fahrenheit = float(input('Input Fahrenheit : '))
-#             result = f_to_c(Fahrenheit)
-#             if result is not None:
-#                 print(f'{Fahrenheit}°F, {result:.4f}°C')
-#         except ValueError :
-#             print("Invalid input. Please enter an integer.")
-#     elif Menu == '3' :
-#         try:
-#             n = int(input("Input an integer: "))
-#             if isprime(n):
-#                 print(f'{n} is a prime number')
-#             else:
-#                 print(f'{n} is not a prime number')
-#         except ValueError:
-#             print("Invalid input. Please enter an integer.")
-#
-#     elif Menu == '4' :
-#         try:
-#             n1, n2 = map(int,input("Input two different numbers : ").split())
-#             n1, n2 = min(n1, n2), max(n1, n2)
-#
-#             for n in range(n1, n2 + 1):
-#                 if isprime(n):
-#                     print(n, end=' ')
-#
-#         except ValueError:
-#             print("Invalid input. Please enter two different integers.")
-#
-#     elif Menu == '5' :
-#         print('Terminating the program.')
-#         break
-#     print()
-#
+def c_to_f(Celsius):
+    if Celsius < -273.15:
+        print("Invalid input. Temperature cannot be below absolute zero.")
+        return None
+    return (Celsius * 9/5) + 32
+
+def f_to_c(Fahrenheit):
+    if Fahrenheit < -459.67:
+        print("Invalid input. Temperature cannot be below absolute zero.")
+        return None
+    return (Fahrenheit - 32) * 5/9
+
+def isprime(n) -> bool:
+    """
+    매개변수로 넘겨받은 수가 소수인지 여부를 boolean으로 리턴
+    : param n: 판정할 매개변수
+    : return: 소수면 True 아니면 False
+    """
+    if n < 2:
+        return False
+    else:
+        i = 2
+        while i*i <= n:
+            if n % i == 0:
+                return False
+            i += 1
+        return True
+print(isprime.__doc__)
+
+while True :
+    Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime number checker between two numbers 5) Quit : ")
+    print()
+    if Menu not in ['1', '2', '3', '4', '5'] :
+        print("Please choose from the menu.")
+    if Menu == '1' :
+        try :
+            Celsius = float(input('Input Celsius : '))
+            result = c_to_f(Celsius)
+            if result is not None:
+                print(f'{Celsius}°C, {result:.4f}°F')
+        except ValueError :
+            print("Invalid input. Please enter an integer.")
+    elif Menu == '2' :
+        try :
+            Fahrenheit = float(input('Input Fahrenheit : '))
+            result = f_to_c(Fahrenheit)
+            if result is not None:
+                print(f'{Fahrenheit}°F, {result:.4f}°C')
+        except ValueError :
+            print("Invalid input. Please enter an integer.")
+    elif Menu == '3' :
+        try:
+            n = int(input("Input an integer: "))
+            if isprime(n):
+                print(f'{n} is a prime number')
+            else:
+                print(f'{n} is not a prime number')
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+
+    elif Menu == '4' :
+        try:
+            n1, n2 = map(int,input("Input two different numbers : ").split())
+            n1, n2 = min(n1, n2), max(n1, n2)
+
+            for n in range(n1, n2 + 1):
+                if isprime(n):
+                    print(n, end=' ')
+
+        except ValueError:
+            print("Invalid input. Please enter two different integers.")
+
+    elif Menu == '5' :
+        print('Terminating the program.')
+        break
+    print()
+
 # #6.1
 # list = [3, 2, 1, 0]
 #
@@ -203,11 +203,11 @@
 # greeting()
 
 #9.4
-class OopsException(Exception):
-    print('Caught an oops')
-list = [-1,1,2,3]
-a = list[0]
-if a < 0 :
-    raise OopsException("oops")
-else :
-    print("fine")
+# class OopsException(Exception):
+#     print('Caught an oops')
+# list = [-1,1,2,3]
+# a = list[0]
+# if a < 0 :
+#     raise OopsException("oops")
+# else :
+#     print("fine")
